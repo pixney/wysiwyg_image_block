@@ -4,21 +4,13 @@ use Anomaly\Streams\Platform\Database\Migration\Migration;
 
 class PixneyExtensionWysiwygImageBlockCreateWysiwygImageBlockFields extends Migration
 {
-
     /**
      * The addon fields.
      *
      * @var array
      */
     protected $fields = [
-        'name' => 'anomaly.field_type.text',
-        'slug' => [
-            'type' => 'anomaly.field_type.slug',
-            'config' => [
-                'slugify' => 'name',
-                'type' => '_'
-            ],
-        ],
+        'content' => 'anomaly.field_type.wysiwyg',
+        'image'   => 'anomaly.field_type.image',
     ];
-
 }
