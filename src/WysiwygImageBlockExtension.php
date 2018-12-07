@@ -2,10 +2,10 @@
 
 namespace Pixney\WysiwygImageBlockExtension;
 
-use Anomaly\Streams\Platform\Addon\Extension\Extension;
+use Anomaly\BlocksModule\Block\BlockExtension;
 use Pixney\WysiwygImageBlockExtension\Block\BlockModel;
 
-class WysiwygImageBlockExtension extends Extension
+class WysiwygImageBlockExtension extends BlockExtension
 {
     protected $provides = 'anomaly.module.blocks::block.wysiwyg_image';
     protected $model    = BlockModel::class;

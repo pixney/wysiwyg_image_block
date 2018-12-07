@@ -1,6 +1,10 @@
 <?php namespace Pixney\WysiwygImageBlockExtension;
 
 use Anomaly\Streams\Platform\Addon\AddonServiceProvider;
+use Pixney\WysiwygImageBlockExtension\Block\Contract\BlockRepositoryInterface;
+use Pixney\WysiwygImageBlockExtension\Block\BlockRepository;
+use Anomaly\Streams\Platform\Model\WysiwygImageBlock\WysiwygImageBlockBlocksEntryModel;
+use Pixney\WysiwygImageBlockExtension\Block\BlockModel;
 use Illuminate\Routing\Router;
 
 class WysiwygImageBlockExtensionServiceProvider extends AddonServiceProvider
@@ -93,14 +97,18 @@ class WysiwygImageBlockExtensionServiceProvider extends AddonServiceProvider
      *
      * @type array|null
      */
-    protected $bindings = [];
+    protected $bindings = [
+        WysiwygImageBlockBlocksEntryModel::class => BlockModel::class,
+    ];
 
     /**
      * The addon singleton bindings.
      *
      * @type array|null
      */
-    protected $singletons = [];
+    protected $singletons = [
+        BlockRepositoryInterface::class => BlockRepository::class,
+    ];
 
     /**
      * Additional service providers.
