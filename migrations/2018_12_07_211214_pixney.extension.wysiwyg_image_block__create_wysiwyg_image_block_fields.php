@@ -11,7 +11,28 @@ class PixneyExtensionWysiwygImageBlockCreateWysiwygImageBlockFields extends Migr
      */
     protected $fields = [
         'classes' => 'anomaly.field_type.text',
-        'content' => 'anomaly.field_type.wysiwyg',
+        'content' => [
+            'type'   => 'anomaly.field_type.wysiwyg',
+            'name'   => 'content',
+            'locked' => false,
+            'config' => [
+                'default_value' => null,
+
+                'buttons' => [
+                    'format',
+                    'bold',
+                    'italic',
+                    'lists',
+                    'link',
+                    'underline',
+                ],
+                'configuration' => '',
+                'plugins'       => ['alignment'],
+                'line_breaks'   => false,
+                'sync'          => true,
+                'height'        => 300,
+            ]
+        ],
         'image'   => [
             'type'   => 'anomaly.field_type.image',
             'config' => [
