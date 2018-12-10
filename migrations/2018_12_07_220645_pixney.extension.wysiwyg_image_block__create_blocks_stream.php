@@ -20,6 +20,7 @@ class PixneyExtensionWysiwygImageBlockCreateBlocksStream extends Migration
      * @var array
      */
     protected $assignments = [
+        'classes',
         'content' => [
             'translatable' => true,
         ],

@@ -10,6 +10,7 @@ class PixneyExtensionWysiwygImageBlockCreateWysiwygImageBlockFields extends Migr
      * @var array
      */
     protected $fields = [
+        'classes' => 'anomaly.field_type.text',
         'content' => 'anomaly.field_type.wysiwyg',
         'image'   => [
             'type'   => 'anomaly.field_type.image',
