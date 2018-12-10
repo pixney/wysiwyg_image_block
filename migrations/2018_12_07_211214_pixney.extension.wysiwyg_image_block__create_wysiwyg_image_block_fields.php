@@ -27,7 +27,7 @@ class PixneyExtensionWysiwygImageBlockCreateWysiwygImageBlockFields extends Migr
                     'underline',
                 ],
                 'configuration' => '',
-                'plugins'       => ['alignment'],
+                'plugins'       => ['alignment', 'source'],
                 'line_breaks'   => false,
                 'sync'          => true,
                 'height'        => 300,
