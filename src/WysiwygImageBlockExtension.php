@@ -9,12 +9,12 @@ class WysiwygImageBlockExtension extends BlockExtension
 {
     protected $provides = 'anomaly.module.blocks::block.wysiwyg_image';
     protected $model    = BlockModel::class;
-    protected $wrapper  = 'pixney.theme.esharawater::blocks/global/wrapper';
+    protected $wrapper  = 'theme::blocks/global/wrapper';
 
     public function getView()
     {
         // TODO : Either get active theme or config..
-        return 'pixney.theme.esharawater::blocks/wysiwyg_image';
+        return 'theme::blocks/wysiwyg_image';
 
         // if ($this->block->configuration('something_special')) {
         //     return 'my_company.extension.awesome_block::alternate_view';
