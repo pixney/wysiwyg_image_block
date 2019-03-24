@@ -10,6 +10,7 @@ class WysiwygImageBlockExtension extends BlockExtension
 {
     protected $provides = 'anomaly.module.blocks::block.wysiwyg_image';
     protected $model    = BlockModel::class;
+    protected $category = 'content';
 
     public function getView()
     {

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title'       => 'Wysiwyg Image Block',
+    'title'       => 'Content & Image',
     'name'        => 'Wysiwyg Image Block Extension',
-    'description' => ''
+    'description' => 'Content editor and image'
 ];
