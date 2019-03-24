@@ -1,0 +1,9 @@
+.block-body
+{
+    .card+.card 
+    {
+        position: relative;
+        z-index:2;
+        margin-top:-64px;
+    }
+}

@@ -1,10 +1,11 @@
-<?php namespace Pixney\WysiwygImageBlockExtension\Block\Form;
+<?php
+
+namespace Pixney\WysiwygImageBlockExtension\Block\Form;
 
 use Anomaly\Streams\Platform\Ui\Form\FormBuilder;
 
 class BlockFormBuilder extends FormBuilder
 {
-
     /**
      * The form fields.
      *
@@ -54,13 +55,39 @@ class BlockFormBuilder extends FormBuilder
      *
      * @var array
      */
-    protected $sections = [];
+    protected $sections = [
+        'license'       => [
+            'fields' => [
+                'entry_content',
+            ],
+        ],
+        'database'      => [
+            'fields' => [
+                //'entry_image',
+                'entry_style',
+            ]
+        ]
+    ];
+
+    //'view' => 'pixney.extension.wysiwyg_image_block::admin/layout'
+    // 'general' => [
+    //     'view' => 'pixney.extension.wysiwyg_image_block::admin/layout'
+    // ]
+    // 'general'      => [
+    //     'view'  => 'module::form/general',
+    // ],
+    // 'advanced'      => [
+    //     'view'  => 'module::form/advanced',
+    // ],
 
     /**
      * The form assets.
      *
      * @var array
      */
-    protected $assets = [];
-
+    protected $assets = [
+        'styles.css' => [
+            'pixney.extension.wysiwyg_image_block::scss/input.scss',
+        ],
+    ];
 }
