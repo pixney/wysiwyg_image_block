@@ -1,0 +1,20 @@
+<div class="m-wysiwygImage {{ block.style }}">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 mx-auto">
+                <div class="row">
+                    <div class="col-12 col-md-6 m-wysiwygImage__contentWrapper">
+                        <div class="m-wysiwygImage__content">
+                            {{ block.content.render|raw }}
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 wysiwygImage__imageWrapper">
+                        <img class="m-wysiwygImage__image" src="{{ block.image.cropped().url }}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
